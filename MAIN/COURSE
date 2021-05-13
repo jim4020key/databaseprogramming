@@ -3,12 +3,13 @@
 CREATE TABLE "course"(   --과목테이블
 						--과목번호 / 분반 / 과목명 / 학점 
 
-	"c_id" VARCHAR2(10),
+	"c_id" VARCHAR2(10) PRIMARY KEY,
 	"c_id_no" NUMBER,
 	"c_name" VARCHAR2(50),
 	"c_unit" NUMBER
 
 );
+
 
 INSERT INTO "course" VALUES('C400','3','데이터베이스','3');  --동일과목신청 오류
 INSERT INTO "course" VALUES('C900','3','객체지향 윈도우즈 프로그래밍','3');  --수강신청 인원 초과 오류
@@ -34,8 +35,4 @@ INSERT INTO "course" VALUES('K200','2','분자세포생물리학','3');
 INSERT INTO "course" VALUES('K400','2','응용물리 진로탐색','3');
 INSERT INTO "course" VALUES('N800','2','법학개론','3');
 INSERT INTO "course" VALUES('N700','2','법학전공자 진로탐색','3');
-
-
-
-
 

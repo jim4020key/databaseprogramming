@@ -1,4 +1,3 @@
-
 --<<TEACH TABLE>>--
 
 CREATE TABLE "teach"(		--과목의 부가정보 (테이블인 것 같아요 아마..)
@@ -8,10 +7,12 @@ CREATE TABLE "teach"(		--과목의 부가정보 (테이블인 것 같아요 아�
 	"t_classroom" VARCHAR2(50),
 	"t_year" NUMBER,    --2021 / 2022 둘 중 하나로 설정해뒀어요
 	"t_semester" NUMBER,
-	"c_id" VARCHAR2(10),
-	"c_id_no" NUMBER
+	"c_id" VARCHAR2(10),     -- FOREIGN KEY 
+	"c_id_no" NUMBER,
 	
+	CONSTRAINT "te_c_id" FOREIGN KEY("c_id") REFERENCES "course"("c_id")
 );
+
 
 
 
