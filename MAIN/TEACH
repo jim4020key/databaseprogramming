@@ -1,0 +1,45 @@
+
+--<<TEACH TABLE>>--
+
+CREATE TABLE "teach"(		--과목의 부가정보 (테이블인 것 같아요 아마..)
+						--최대인원 / 시간(몇교시인지) / 장소 / 수강신청 년도 / 수강신청 학기 / 과목번호 / 분반 
+	"t_max" NUMBER,
+	"t_time" NUMBER,
+	"t_classroom" VARCHAR2(50),
+	"t_year" NUMBER,    --2021 / 2022 둘 중 하나로 설정해뒀어요
+	"t_semester" NUMBER,
+	"c_id" VARCHAR2(10),
+	"c_id_no" NUMBER
+	
+);
+
+
+
+
+INSERT INTO "teach" VALUES('10','1','명신관','2021','1','C400','3');  --동일과목신청 오류
+INSERT INTO "teach" VALUES('1','2','과학관','2021','1','C900','3');  --수강신청 인원 초과 오류 (t_max=1로 설정해뒀어요)
+INSERT INTO "teach" VALUES('10','3','진리관','2021','2','M100','3');  --시간중복 오류
+INSERT INTO "teach" VALUES('10','4','프라임관','2022','1','C800','3');  --성공
+INSERT INTO "teach" VALUES('10','5','명신관','2022','2','M700','3');  --최대학점초과 오류
+
+INSERT INTO "teach" VALUES('10','1','명신관','2021','1','C300','3');
+INSERT INTO "teach" VALUES('5','2','과학관','2021','1','C100','3');
+INSERT INTO "teach" VALUES('5','3','진리관','2021','1','M800','3');
+INSERT INTO "teach" VALUES('5','4','프라임관','2021','1','M600','3');
+INSERT INTO "teach" VALUES('5','5','명신관','2021','1','A300','3');
+
+INSERT INTO "teach" VALUES('5','1','명신관','2021','2','A400','3');
+INSERT INTO "teach" VALUES('5','2','과학관','2021','2','B100','3');
+INSERT INTO "teach" VALUES('8','3','진리관','2021','2','B200','1');
+INSERT INTO "teach" VALUES('8','4','프라임관','2021','2','D500','1');
+
+INSERT INTO "teach" VALUES('8','1','명신관','2022','1','D600','1');
+INSERT INTO "teach" VALUES('8','2','과학관','2022','1','E300','1');
+INSERT INTO "teach" VALUES('8','3','진리관','2022','1','E500','2');
+INSERT INTO "teach" VALUES('15','4','프라임관','2022','1','F800','2');
+
+INSERT INTO "teach" VALUES('15','1','명신관','2022','2','F100','2');
+INSERT INTO "teach" VALUES('15','2','과학관','2022','2','K200','2');
+INSERT INTO "teach" VALUES('15','3','진리관','2022','2','K400','2');
+INSERT INTO "teach" VALUES('15','4','프라임관','2022','2','N800','2');
+INSERT INTO "teach" VALUES('15','5','명신관','2022','2','N700','2');
