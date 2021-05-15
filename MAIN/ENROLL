@@ -1,17 +1,19 @@
+  
 --<<ENROLL TABLE>>--
 
-CREATE TABLE "enroll"(  --수강신청 성공시 정보 입력되는 테이블
+CREATE TABLE enroll(  --수강신청 성공시 정보 입력되는 테이블
 					 --학번 / 과목번호 / 분반 / 신청년도 / 신청학기
-	"s_id" VARCHAR2(10),   --FOREIGN KEY
-	"c_id" VARCHAR2(10),
-	"c_id_no" NUMBER,
-	"e_year" NUMBER,
-	"e_semester" NUMBER,
-	CONSTRAINT "e_s_id" FOREIGN KEY("s_id") REFERENCES "student"("s_id")
-	 
+	s_id VARCHAR2(10),   --FOREIGN KEY
+	c_id VARCHAR2(10),   --FOREIGN KEY
+	c_id_no NUMBER,     
+	e_year NUMBER,
+	e_semester NUMBER,
+	CONSTRAINT e_pk PRIMARY KEY(s_id, c_id, c_id_no),
+	CONSTRAINT e_c_id_fk FOREIGN KEY(c_id, c_id_no) REFERENCES course(c_id, c_id_no)
+	
 );
 
     --1818181 로그인한 기준으로 오류 작성시 --
-INSERT INTO "enroll" VALUES('1818181','C400','3','2021','1');  --동일과목신청 오류
-INSERT INTO "enroll" VALUES('1400000','C900','3','2021','2');  --수강신청인원초과
-INSERT INTO "enroll" VALUES('1818181','M800','3','2021','1');  --시간중복오류
+INSERT INTO enroll VALUES('1818181','C400',3,2021,1);  --동일과목신청 오류
+INSERT INTO enroll VALUES('1400000','C900',3,2021,1);  --수강신청인원초과
+INSERT INTO enroll VALUES('1818181','M800',3,2021,1);  --시간중복오류
