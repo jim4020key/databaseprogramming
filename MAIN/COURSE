@@ -1,7 +1,6 @@
 --<<COURSE TABLE>>--
 
-CREATE TABLE course(   --과목테이블
-						--과목번호 / 분반 / 과목명 / 학점 
+CREATE TABLE COURSE(   
 
 	c_id VARCHAR2(10),
 	c_id_no NUMBER,
