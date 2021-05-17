@@ -17,26 +17,26 @@ CREATE TABLE teach(		--과목의 부가정보 (테이블인 것 같아요 아마
 
 
 
-INSERT INTO teach VALUES(10,1,'명신관',1,2021,1,'C400',3);  --동일과목신청 오류
-INSERT INTO teach VALUES(1,2,'과학관',2,2021,1,'C900',3);  --수강신청 인원 초과 오류 (t_max=1로 설정해뒀어요)
-INSERT INTO teach VALUES(10,3,'진리관',3,2021,1,'M100',3);  --시간중복오류
-INSERT INTO teach VALUES(10,4,'프라임관',4,2022,1,'C800',3);  --성공
-INSERT INTO teach VALUES(10,5,'명신관',5,2022,1,'M700',3);  --최대학점 초과오류
+INSERT INTO teach VALUES(10,1,'명신관',1,2021,2,'C400',3); -- 동일 과목 신청 오류
+INSERT INTO teach VALUES(1,2,'과학관',1,2021,2,'C900',3);  -- 수강신청 인원 초과 여부
+INSERT INTO teach VALUES(10,3,'진리관',1,2021,2,'M100',3);  -- 시간 중복 여부
+INSERT INTO teach VALUES(10,4,'프라임관',1,2021,2,'C800',3);  -- 성공
+INSERT INTO teach VALUES(10,5,'명신관',1,2021,2,'M700',3);  -- 최대학점 초과
 
-INSERT INTO teach VALUES(10,1,'명신관',1,2021,1,'C300',3);
-INSERT INTO teach VALUES(5,2,'과학관',2,2021,1,'C100',3);
-INSERT INTO teach VALUES(5,3,'진리관',3,2021,1,'M800',3);
-INSERT INTO teach VALUES(5,4,'프라임관',4,2021,1,'M600',3);
-INSERT INTO teach VALUES(5,5,'명신관',5,2021,1,'A300',3);
+INSERT INTO teach VALUES(10,1,'명신관',2,2021,2,'C300',3);
+INSERT INTO teach VALUES(5,2,'과학관',2,2021,2,'C100',3);
+INSERT INTO teach VALUES(5,3,'진리관',1,2021,2,'M800',3);
+INSERT INTO teach VALUES(5,3,'프라임관',2,2021,2,'M600',3);
+INSERT INTO teach VALUES(5,4,'명신관',2,2021,2,'A300',3);
 
-INSERT INTO teach VALUES(5,1,'명신관',1,2021,2,'A400',3);
-INSERT INTO teach VALUES(5,2,'과학관',2,2021,2,'B100',3);
+INSERT INTO teach VALUES(5,1,'명신관',3,2021,2,'A400',3);
+INSERT INTO teach VALUES(5,2,'과학관',3,2021,2,'B100',3);
 INSERT INTO teach VALUES(8,3,'진리관',3,2021,2,'B200',1);
-INSERT INTO teach VALUES(8,4,'프라임관',4,2021,2,'D500',1);
+INSERT INTO teach VALUES(8,4,'프라임관',3,2021,2,'D500',1);
 
-INSERT INTO teach VALUES(8,1,'명신관',1,2022,1,'D600',1);
-INSERT INTO teach VALUES(8,2,'과학관',2,2022,1,'E300',1);
-INSERT INTO teach VALUES(8,3,'진리관',3,2022,1,'E500',2);
+INSERT INTO teach VALUES(8,1,'명신관',4,2021,2,'D600',1);
+INSERT INTO teach VALUES(8,2,'과학관',4,2021,2,'E300',1);
+INSERT INTO teach VALUES(8,3,'진리관',4,2021,2,'E500',2);
 INSERT INTO teach VALUES(15,4,'프라임관',4,2022,1,'F800',2);
 
 INSERT INTO teach VALUES(15,1,'명신관',1,2022,2,'F100',2);

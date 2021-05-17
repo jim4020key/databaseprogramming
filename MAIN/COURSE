@@ -1,6 +1,7 @@
 --<<COURSE TABLE>>--
 
-CREATE TABLE COURSE(   
+CREATE TABLE course(   --과목테이블
+						--과목번호 / 분반 / 과목명 / 학점 
 
 	c_id VARCHAR2(10),
 	c_id_no NUMBER,
@@ -19,7 +20,7 @@ INSERT INTO course VALUES('M700',3,'게임프로그래밍',3);
 
 INSERT INTO course VALUES('C300',3,'통계프로그래밍',1);
 INSERT INTO course VALUES('C100',3,'회귀분석입문',1);
-INSERT INTO course VALUES('M800',3,'기초통계학',1);
+INSERT INTO course VALUES('M800',3,'기초통계학',3);
 INSERT INTO course VALUES('M600',3,'진로탐색',1);
 INSERT INTO course VALUES('A300',3,'글로벌미디어영어',1);
 INSERT INTO course VALUES('A400',3,'경제학개론',2);
@@ -35,4 +36,3 @@ INSERT INTO course VALUES('K200',2,'분자세포생물리학',3);
 INSERT INTO course VALUES('K400',2,'응용물리 진로탐색',3);
 INSERT INTO course VALUES('N800',2,'법학개론',3);
 INSERT INTO course VALUES('N700',2,'법학전공자 진로탐색',3);
-
