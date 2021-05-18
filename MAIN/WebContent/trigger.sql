@@ -15,7 +15,7 @@ BEGIN
     /* 암호 제약조건 : 4자리 이상, blank는 허용안함 */
     SELECT length(:new.s_pwd), instr(:new.s_pwd,' ')
     INTO nLength, nBlank
-    FROM students s;
+    FROM dual;
 
     IF (nLength < 4) THEN
         RAISE underflow_length;

@@ -16,8 +16,8 @@
 	
 	
 	// 여기 변경하고 하세요!!
-	String user="1813467학번";
-	String password="ss2";
+	String user="db1714435";
+	String password="oracle";
 	//
 	
 	
