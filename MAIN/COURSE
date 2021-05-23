@@ -7,7 +7,7 @@ CREATE TABLE course(   --과목테이블
 	c_id_no NUMBER,
 	c_name VARCHAR2(50),
 	c_unit NUMBER,
-	c_class VARCHAR2(50)
+	c_class VARCHAR2(50),
 	CONSTRAINT c_pk PRIMARY KEY(c_id, c_id_no)
 	
 );
