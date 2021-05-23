@@ -30,7 +30,7 @@ INSERT INTO course VALUES('B200',1,'일본대중문화기행',2,'교양선택');
 INSERT INTO course VALUES('D500',1,'비즈니스와 문화',2,'교양선택');
 INSERT INTO course VALUES('D600',1,'신화의 이해',2,'교양선택');
 INSERT INTO course VALUES('E300',1,'회계원리',2,'전공필수');
-INSERT INTO course VALUES('E500',2,'작곡가집중연구',3,'전공필수');
+INSERT INTO course VALUES('E500',2,'작곡가집중연구',3,'전공필수'); 
 INSERT INTO course VALUES('F800',2,'서양음악사',3,'전공선택');
 INSERT INTO course VALUES('F100',2,'나노물리',3,'전공선택');
 INSERT INTO course VALUES('K200',2,'분자세포생물리학',3,'전공선택');
