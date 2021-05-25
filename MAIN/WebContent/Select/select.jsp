@@ -3,7 +3,7 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("UTF-8"); %>
-<%@ include file="top.jsp" %>
+<%@ include file="../Main/top.jsp" %>
 <%
 	if (session_id == null) 
 		response.sendRedirect("login.jsp");
@@ -50,7 +50,7 @@
 	String sql;
 	String sub_sql;
 	String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
-	String user = "db1816526";                                       
+	String user = "1813467학번";                                       
 	String passwd = "ss2";
 %>
 	<form method="post" width="75%" align="center" id="select_form" action="select.jsp"> 
@@ -134,6 +134,7 @@
 			<td align="center"><%=str_course_day %><%= course_time%></td>
 			<td align="center"><%=course_place %></td>
 			<td align="center"><%=course_unit %></td>
+		
 <%
 
 
@@ -147,7 +148,8 @@
 	}
 
 %>
-		</tr>
+		 </tr>
+		
 	</table>
 	<br/>
 	<br/>

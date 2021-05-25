@@ -7,7 +7,7 @@
 <title>수강신청 사용자 정보 수정</title>
 </head>
 <body>
-<%@ include file="top.jsp" %>
+<%@ include file="../Main/top.jsp" %>
 <%
 if (session_id==null) response.sendRedirect("login.jsp");
 %>
@@ -16,7 +16,7 @@ if (session_id==null) response.sendRedirect("login.jsp");
 	Connection myConn = null;      PreparedStatement pstmt = null;
 	ResultSet myResultSet = null;   String mySQL = "";
 	String dburl  = "jdbc:oracle:thin:@localhost:1521:xe";
-	String user="db1714435";     String passwd="oracle";
+	String user="1813467학번";     String passwd="ss2";
     String dbdriver = "oracle.jdbc.driver.OracleDriver";    
 
     myConn = DriverManager.getConnection(dburl, user, passwd);

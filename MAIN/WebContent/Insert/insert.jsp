@@ -5,7 +5,7 @@
 		<title>수강신청 입력</title>
 	</head>
 <body>
-<%@ include file="top.jsp" %>
+<%@ include file="../Main/top.jsp" %>
 <% 	
 	request.setCharacterEncoding("UTF-8");
 	if (session_id==null) response.sendRedirect("login.jsp");  
@@ -18,7 +18,7 @@
 	Connection myConn = null;      Statement stmt = null;	
 	ResultSet myResultSet = null;   String mySQL = "";
 	String dburl  = "jdbc:oracle:thin:@localhost:1521:xe";
-	String user="db1816526";     String passwd="ss2";
+	String user="1813467학번";     String passwd="ss2";
      String dbdriver = "oracle.jdbc.driver.OracleDriver";    
 
 	try {

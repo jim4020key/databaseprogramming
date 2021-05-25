@@ -5,7 +5,7 @@ CREATE TABLE course(   --과목테이블
 
 	c_id VARCHAR2(10),
 	c_id_no NUMBER,
-	c_name VARCHAR2(50),
+	c_name VARCHAR2(100),
 	c_unit NUMBER,
 	c_class VARCHAR2(50),
 	CONSTRAINT c_pk PRIMARY KEY(c_id, c_id_no)
@@ -13,7 +13,8 @@ CREATE TABLE course(   --과목테이블
 );
 
 
-INSERT INTO course VALUES('C400',3,'데이터베이스',3,'전공선택'); -> 오류 발생하는 행
+
+INSERT INTO course VALUES('C400',3,'데이터베이스',3,'전공선택'); 
 INSERT INTO course VALUES('C900',3,'객체지향 윈도우즈 프로그래밍',3,'전공선택');  
 INSERT INTO course VALUES('M100',3,'멀티미디어 개론',3,'전공선택'); 
 INSERT INTO course VALUES('C800',3,'자료구조',3,'전공필수');  
