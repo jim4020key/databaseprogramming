@@ -15,8 +15,10 @@ CREATE TABLE enroll(  --수강신청 성공시 정보 입력되는 테이블
 	
 );
 
-select * from enroll;
     --1818181 로그인한 기준으로 오류 작성시 --
 INSERT INTO enroll VALUES('1818181','C400',3,2021,2,1,1);  -- 이미 담은 수업
 INSERT INTO enroll VALUES('1400000','C900',3,2021,2,2,2);  -- 수강신청인원초과
-INSERT INTO enroll VALUES('1818181','M800',3,2021,2,3,3);  -- 시간중복오류
+
+
+select * from enroll;
+delete from enroll;

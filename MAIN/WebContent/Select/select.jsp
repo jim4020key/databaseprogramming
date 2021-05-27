@@ -4,13 +4,14 @@
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 <%@ include file="../Main/top.jsp" %>
+
 <%
 	if (session_id == null) 
 		response.sendRedirect("login.jsp");
 %>
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 	<meta charset="UTF-8">
 	<title>수강신청 조회</title>
 	<script>
