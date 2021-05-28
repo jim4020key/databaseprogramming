@@ -38,7 +38,7 @@
 %>
 <script>
 	alert("변경이 완료되었습니다."); 
-	location.href="main.jsp";  
+	location.href="../Main/main.jsp";  
 </script>
 <%
 		} catch(SQLException ex) {
