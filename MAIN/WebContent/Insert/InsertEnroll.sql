@@ -14,7 +14,7 @@ IS
   nCourseUnit NUMBER;
   nCnt NUMBER;
   nTeachMax NUMBER;
-
+	
 BEGIN
   result := '';
 
@@ -24,13 +24,12 @@ BEGIN
   nYear := Date2EnrollYear(SYSDATE);
   nSemester := Date2EnrollSemester(SYSDATE);
 
-  /* 에러 처리 1 : 최대학점 초과여부 */
-  /* 기존 학생의 수강 학점 */
+
   SELECT SUM(c.c_unit) 
   INTO	 nSumCourseUnit
   FROM   course c, enroll e
   WHERE  e.s_id = sStudentId and e.e_year = nYear and e.e_semester = nSemester and  e.c_id = c.c_id and e.c_id_no = c.c_id_no;
-  /* 신청한 과목의 학점*/
+
   SELECT c_unit
   INTO	 nCourseUnit
   FROM	 course
@@ -41,7 +40,7 @@ BEGIN
      RAISE too_many_sumCourseUnit;
   END IF;
   
-  /* 에러 처리 2 : 동일한 과목 신청 여부 */
+
   SELECT COUNT(*)
   INTO	 nCnt
   FROM   enroll
@@ -52,7 +51,7 @@ BEGIN
      RAISE too_many_courses;
   END IF;
 
-  /* 에러 처리 3 : 수강신청 인원 초과 여부 */
+
   SELECT t_max
   INTO	 nTeachMax
   FROM   teach 
@@ -69,7 +68,7 @@ BEGIN
      RAISE too_many_students;
   END IF;
   
-  /* 에러 처리 4 : 신청한 과목 시간 중복 여부 */
+
   SELECT COUNT(*) 
   INTO   nCnt
   FROM
@@ -86,7 +85,7 @@ BEGIN
   THEN
      RAISE duplicate_time;
   END IF;  
-
+  
   INSERT INTO enroll(S_ID,C_ID,C_ID_NO,E_YEAR,E_SEMESTER, T_TIME, T_DAY)
   VALUES (sStudentId, sCourseId, nCourseIdNo, nYear, nSemester, 0, 0);
 
@@ -102,6 +101,8 @@ EXCEPTION
     result := '수강신청 인원이 초과되어 등록이 불가능합니다';
   WHEN duplicate_time THEN
     result := '이미 등록된 과목 중 중복되는 시간이 존재합니다';
+  WHEN no_data_found THEN
+    result := '이번 학기에 해당하는 강좌가 아닙니다.';
   WHEN OTHERS THEN
     ROLLBACK;
     result := SQLCODE;
