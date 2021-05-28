@@ -10,9 +10,6 @@ DECLARE
     nBlank NUMBER;
 
 BEGIN
-    /* 학년 제약조건 : DDL에서 해결 */
-    /* 보다 복잡한 제약조건을 다루기 편하게 함 */
-    /* 암호 제약조건 : 4자리 이상, blank는 허용안함 */
     SELECT length(:new.s_pwd), instr(:new.s_pwd,' ')
     INTO nLength, nBlank
     FROM dual;

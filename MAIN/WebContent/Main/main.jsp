@@ -22,6 +22,9 @@
 	<tr>
 		<td align="center">로그인한 후 사용하세요.</td>
 	</tr>
+	<tr>
+		<td align="center"><a href="register.jsp">회원가입</a></td>
+	</tr>
 <% 		
 	}
 %>
