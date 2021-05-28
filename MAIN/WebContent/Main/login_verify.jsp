@@ -31,7 +31,7 @@
 		}finally{
 			if(rs != null){
 				if (rs.next()){
-					session.setAttribute("user", userID);
+					session.setAttribute("userID", userID);
 %>
 			<script> 
 					alert("환영합니다.");

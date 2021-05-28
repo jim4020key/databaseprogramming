@@ -5,7 +5,7 @@
 <body>
 
 <%	
-	String s_id = (String)session.getAttribute("user");
+	String s_id = (String)session.getAttribute("userID");
 	String c_id = request.getParameter("c_id");
 	int c_id_no = Integer.parseInt(request.getParameter("c_id_no"));
 %>
