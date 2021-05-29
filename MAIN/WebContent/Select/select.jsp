@@ -3,12 +3,7 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("UTF-8"); %>
-<%@ include file="../Main/top.jsp" %>
 
-<%
-	if (session_id == null) 
-		response.sendRedirect("login.jsp");
-%>
 <!DOCTYPE html>
 <html>
 <head> 
@@ -24,6 +19,12 @@
 	</script>
 </head>
 <body>
+<a href="../Main/main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
+<%@ include file="../Main/top.jsp" %>
+<%
+	if (session_id == null) 
+		response.sendRedirect("login.jsp");
+%>
 <% 
 	String search_year = request.getParameter("search_year");
 	String search_semester = request.getParameter("search_semester");
@@ -35,11 +36,12 @@
 	int course_id_no;
 	String course_name = "";
 	int course_unit = 0;
-	
+	int class_count = 0;
 	String int_course_day = "";
 	String str_course_day = "";
 	String course_time = "";
 	String course_place = "";
+	String course_class = "";
 	int max_student_num = 0;
 	int total_course = 0;
 	int total_unit = 0;
@@ -67,7 +69,7 @@
 
 %>
 		<tr>
-			<th>과목번호</th><th>분반</th><th>과목명</th><th>시간</th>
+			<th>과목번호</th><th>분반</th><th>과목명</th><th>강의유형</th><th>시간</th>
 			<th>강의장소</th><th>학점</th>
 		</tr>
 <%
@@ -88,7 +90,7 @@
 			course_id = rs.getString("c_id");
 			course_id_no = rs.getInt("c_id_no");
 			
-			sub_sql = "SELECT c_name, c_unit FROM course WHERE c_id = ? and c_id_no = ?";
+			sub_sql = "SELECT c_name, c_unit c_class FROM course WHERE c_id = ? and c_id_no = ?";
 			pstmt = conn.prepareStatement(sub_sql);
 			pstmt.setString(1, course_id);
 			pstmt.setInt(2, course_id_no);
@@ -96,10 +98,12 @@
 			if (sub_rs.next()) {
 				course_name = sub_rs.getString("c_name");
 				course_unit = sub_rs.getInt("c_unit");
+				course_class = sub_rs.getString("c_class");
 				total_unit = total_unit + course_unit;
 				total_course++;
 			}
-			
+			if( course_class.equals("전공필수"))
+				class_count = class_count +1;
 			sub_sql = "SELECT t_day, t_time, t_classroom, t_max FROM teach WHERE c_id = ? and c_id_no = ?";
 			pstmt = conn.prepareStatement(sub_sql);
 			pstmt.setString(1, course_id);
@@ -132,6 +136,7 @@
 			<td align="center"><%=course_id %></td>
 			<td align="center"><%=course_id_no %></td>
 			<td align="center"><%=course_name %></td>
+			<td align="center"><%=course_class %></td>
 			<td align="center"><%=str_course_day %><%= course_time%></td>
 			<td align="center"><%=course_place %></td>
 			<td align="center"><%=course_unit %></td>
@@ -156,7 +161,8 @@
 	<br/>
 	<div width="75%" align="center">
 		<p><%=search_year %>년 <%=search_semester %>학기 수강신청 검색 결과 : </p>
-		<p>현재까지 <%=total_course %>과목, 총 <%=total_unit %>학점 수강신청 했습니다 </p>
+		<p>현재까지 전공필수 <%=class_count %>개, 총 <%=total_course %>과목, <%=total_unit %>학점 수강신청 했습니다. </p>
+		<p>전공필수 개수를 확인해주세요.</p>
 	</div>
 <%
 	
