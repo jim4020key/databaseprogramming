@@ -11,7 +11,7 @@
 <body>
 <body onload="printClock()">
 <h1 class="frontpage">
-	<img id = "frontimage" src="image/sym_squ.gif" width = "150" >
+	<img id = "frontimage" src="../image/sym_squ.gif" width = "150" >
 	<p id="fronttext">
 	&nbsp;<strong>수강신청</strong> 주의사항 <br><br> &nbsp;&nbsp;1. 18학점을 넘을 수 없다.<br>
 	&nbsp;&nbsp;2. 동일 시간대에는 한가지 과목만 신청할 수 있다. <br> &nbsp;&nbsp;3. 전공필수과목은 한과목 이상 수강해야 한다. 
