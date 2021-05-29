@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<link rel="stylesheet" type="text/css" media="screen" href="DBdesign.css"/>    
+<style type="text/css">
+	#home, #home:visited{
+		font-family:s-core-dream-thin;
+		text-decoration: none;
+		font-size:1.2dm;
+	}
+</style>
 <% 
 	String session_id = (String)session.getAttribute("userID");
 	String log;
