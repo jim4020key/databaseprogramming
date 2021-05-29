@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>데이터베이스를 활용한 수강신청 시스템입니다.</title>
+<link rel="stylesheet" type="text/css" media="screen" href="DBdesign.css"/>
 </head>
 <body>
 <%@include file="top.jsp" %>
