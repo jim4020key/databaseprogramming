@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 's-core-dream-thin';
+    src: url('./S-Core-Dream-full/scdream1.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-extralight';
+    src: url('./S-Core-Dream-full/scdream2-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-light';
+    src: url('./S-Core-Dream-full/scdream3-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream3-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-regular';
+    src: url('./S-Core-Dream-full/scdream4-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream4-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-medium';
+    src: url('./S-Core-Dream-full/scdream5-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream5-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-bold';
+    src: url('./S-Core-Dream-full/scdream6-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream6-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-extrabold';
+    src: url('./S-Core-Dream-full/scdream7-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-heavy';
+    src: url('./S-Core-Dream-full/scdream8-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream8-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-black';
+    src: url('./S-Core-Dream-full/scdream9-webfont.woff2') format('woff2'),
+         url('./S-Core-Dream-full/scdream9-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#home, #home:visited{
+		font-family:s-core-dream-thin;
+		text-decoration: none;
+		font-size:1.2dm;
+}
+	
+body{
+	font-family: s-core-dream-thin;
+	font-size : 1.1em;
+	font-weight:bold;
+}
+
+#main_c{
+	font-family: s-core-dream-thin;
+	font-weight:bold;
+	padding-top:2%;
+	border-radius: 20px;
+}
+
+.frontpage{
+	font-size : 1.0em;
+	margin-top:2%;
+	margin-left:5%;
+	margin-right:5%;
+}
+strong{
+	font-size : 1.2em;
+	font-weight: bold;
+}
+#frontimage{
+	float:left;
+	margin-left:10%;
+	margin-right:2%;
+}
+#fronttext{
+	margint-top : 10%;
+	float:left;
+}
+#clock{
+	font-size: 70px; 
+	OVERFLOW: hidden; 
+	HEIGHT: 100px;
+	WIDTH: 40%;  
+	COLOR: #666; 
+	TEXT-ALIGN: center; 
+	LINE-HEIGHT: 100px;
+	margin-top:3%;
+	margin-right:15%;
+	position:fixed;
+}
+#homeimage{
+	margin :2%;
+}
+
+#inserttable{
+	font-weight:bold;
+}
