@@ -15,7 +15,7 @@
 	</style>
 </head>
 <body>
-<a href="main.jsp"><img id = "homeimage" src="image/sym_rec.png"></a>
+<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
 <%@ include file="top.jsp" %>
 <%
 	if (session_id == null) 
