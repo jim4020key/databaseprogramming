@@ -8,7 +8,7 @@
 <title>회원가입</title>
 </head>
 <body>
-	<a href="main.jsp"><img id = "homeimage" src="image/sym_rec.png"></a>
+	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
 	<%@ include file="top.jsp" %>
 	<table width="75%" align="center" bgcolor="#eeeeee" border>
 		<tr>
