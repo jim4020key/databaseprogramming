@@ -8,7 +8,7 @@
 	<title>수강신청 시스템 로그인</title>
 </head>
 <body>
-	<a href="main.jsp"><img id = "homeimage" src="image/sym_rec.png"></a>
+	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
 	<table width="75%" align="center" bgcolor="#FFFF99" border>
 		<tr>
 			<td><div align="center">아이디와 패스워드를 입력하세요</div></td>
