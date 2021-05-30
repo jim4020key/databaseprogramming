@@ -7,10 +7,11 @@
 <title>수강신청 사용자 정보 수정</title>
 </head>
 <body>
-<%@ include file="../Main/top.jsp" %>
-<%
-if (session_id==null) response.sendRedirect("login.jsp");
-%>
+	<a href="main.jsp"><img id = "homeimage" src="image/sym_rec.png"></a>
+	<%@ include file="../Main/top.jsp" %>
+	<%
+	if (session_id==null) response.sendRedirect("login.jsp");
+	%>
 
 <%
 	Connection myConn = null;      PreparedStatement pstmt = null;
