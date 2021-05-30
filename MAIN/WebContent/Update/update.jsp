@@ -7,7 +7,7 @@
 <title>수강신청 사용자 정보 수정</title>
 </head>
 <body>
-	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
+	<a href="../Main/main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
 	<%@ include file="../Main/top.jsp" %>
 	<%
 	if (session_id==null) response.sendRedirect("login.jsp");
