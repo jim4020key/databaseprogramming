@@ -12,7 +12,7 @@
 </head>
 <body>
 	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
-<%@ include file="top.jsp" %>
+<%@ include file="../MAIN/top.jsp" %>
 <% 	
 	request.setCharacterEncoding("UTF-8");
 	if (session_id==null) response.sendRedirect("login.jsp");  
