@@ -2,7 +2,6 @@
 <%@ page import="java.sql.*"  %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.io.*" %>
-<%@ include file="../Main/top.jsp" %>
 
 <!DOCTYPE html>
 <html>
