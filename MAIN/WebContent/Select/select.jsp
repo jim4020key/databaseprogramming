@@ -63,18 +63,13 @@
 		학기 <input type="text" name="search_semester" value="<%=search_semester %>" size="10"/>
 		<input type="button" value="SEARCH" onclick="onSearch()"/>
 	</form>
-	
+	<br>
 	<table width="75%" align="center" border = "1" id="select_table">
-<% 
-
-%>
 		<tr>
 			<th>과목번호</th><th>분반</th><th>과목명</th><th>강의유형</th><th>시간</th>
 			<th>강의장소</th><th>학점</th>
 		</tr>
 <%
-	
-	
 	try {
 		Class.forName("oracle.jdbc.driver.OracleDriver");            
 		conn = DriverManager.getConnection(dburl, user, passwd);
@@ -90,7 +85,7 @@
 			course_id = rs.getString("c_id");
 			course_id_no = rs.getInt("c_id_no");
 			
-			sub_sql = "SELECT c_name, c_unit c_class FROM course WHERE c_id = ? and c_id_no = ?";
+			sub_sql = "SELECT c_name, c_unit, c_class FROM course WHERE c_id = ? and c_id_no = ?";
 			pstmt = conn.prepareStatement(sub_sql);
 			pstmt.setString(1, course_id);
 			pstmt.setInt(2, course_id_no);
