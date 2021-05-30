@@ -15,13 +15,14 @@
 	</style>
 </head>
 <body>
-<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
+<a href="main.jsp"><img id = "homeimage" src="image/sym_rec.png"></a>
 <%@ include file="top.jsp" %>
 <%
 	if (session_id == null) 
-		response.sendRedirect("../Main/login.jsp");
+		response.sendRedirect("login.jsp");
 %>
 <% 
+	int first=1;
 	int start =0;
 	int remember=0;
 	String course_id;
@@ -40,18 +41,6 @@
 	String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
 	String user = "db1811458";                       
 	String passwd = "oracle";
-%>
-<br><br>
-	<table width="60%" height="600" align="center" id="time_table" border>
-<% 
-
-%>
-		<tr width=20% height="50">
-			<th width = "70"> 교시 </th><th>월요일</th><th>화요일</th><th>수요일</th>
-			<th>목요일</th><th>금요일</th>
-		</tr>
-<%
-	
 	
 	try {
 		Class.forName("oracle.jdbc.driver.OracleDriver");            
@@ -74,6 +63,50 @@
 				course_name = sub_rs.getString("c_name");
 			}
 			
+
+			if(first==1){
+				%>
+				<br><br>
+					<table width="60%" height="600" align="center" id="time_table" border>
+				<% 
+
+				%>
+						<tr width=20% height="50">
+							<th width = "70"> 교시 </th><th>월요일</th><th>화요일</th><th>수요일</th>
+							<th>목요일</th><th>금요일</th>
+						</tr>
+				<%
+				if(course_time==1);
+				else if(course_time==2){
+					%><tr><th>1</th>
+					<td></td><td></td><td></td><td></td><td></td></tr><%
+				}
+				else if(course_time==3){
+					%><tr><th>1</th>
+					<td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><th>2</th>
+					<td></td><td></td><td></td><td></td><td></td></tr><%
+				}
+				else if(course_time==4){
+					%><tr><th>1</th>
+					<td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><th>2</th>
+					<td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><th>3</th>
+					<td></td><td></td><td></td><td></td><td></td></tr><%
+				}
+				else if(course_time==5){
+					%><tr><th>1</th>
+					<td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><th>2</th>
+					<td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><th>3</th>
+					<td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><th>4</th>
+					<td></td><td></td><td></td><td></td><td></td></tr><%
+				}
+				first=0;
+			}
 %>
 				<%
 				switch(course_time){
@@ -95,9 +128,8 @@
 						}
 						break;
 					}
-					else{
+					else
 						%><td></td><%
-					}
 				case 2:
 					if(start < 5){
 						if(course_time - remember == 1){
@@ -125,7 +157,7 @@
 						break;
 					}
 					else{
-						%><th></th><%
+						break;
 					}
 				case 3:
 					if(start < 5){
@@ -134,6 +166,16 @@
 								%><td></td><%
 							%></tr><%
 							start = 0;
+						}
+						else if(course_time-remember ==2){
+							for(int j = start;j<5;j++)
+								%><td></td><%
+							%></tr><%
+							%><tr><th>2</th><%
+							for( int j = 0 ;j <5;j++)
+								%><td></td><%
+							%></tr><%
+							start =0;
 						}
 					}
 					remember = 3;
@@ -154,7 +196,7 @@
 						break;
 					}
 					else{
-						%><th></th><%
+						break;
 					}
 				case 4: 
 					if(start < 5){
@@ -183,7 +225,7 @@
 						break;
 					}
 					else{
-						%><th></th><%
+						break;
 					}
 				case 5:
 					if(start < 5){
@@ -212,27 +254,37 @@
 						break;
 					}
 					else{
-						%><th></th><%
+						break;
 					}
+				default:
+					break;
 				}
-						
-		}
+		}		
+		
 		if(start <5){
 			for( int j = start ;j <5;j++)
 				%><td></td><%
 			%></tr><%
 		}
-		if(remember<5){
-			for(int j=remember; j<5;j++){
-				%><tr><th><%=remember+1%></th><%
-				for(int i = 0;i<5;i++)
-					%><td></td><%
-				%></tr><%
+		if(remember !=0){
+			if(remember<5){
+				for(int j=remember; j<5;j++){
+					%><tr><th><%=remember+1%></th><%
+					for(int i = 0;i<5;i++)
+						%><td></td><%
+					%></tr><%
+				}
 			}
+		}
+		else if(remember == 0){
+			%><div width="75%" align="center">
+			<p> 수강신청된 강의가 없습니다. </p>
+			</div><%
 		}
 		rs.close();
 		pstmt.close();
 		conn.close();
+		
 	} 
 	catch(SQLException ex) { 
 		System.err.println("SQLException: " + ex.getMessage());
