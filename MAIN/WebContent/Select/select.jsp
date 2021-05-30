@@ -64,7 +64,7 @@
 		<input type="button" value="SEARCH" onclick="onSearch()"/>
 	</form>
 	
-	<table width="75%" align="center" id="select_table">
+	<table width="75%" align="center" border = "1" id="select_table">
 <% 
 
 %>

@@ -14,7 +14,7 @@ IS
   nCourseUnit NUMBER;
   nCnt NUMBER;
   nTeachMax NUMBER;
-	
+
 BEGIN
   result := '';
 
@@ -84,10 +84,10 @@ BEGIN
   IF (nCnt > 0)
   THEN
      RAISE duplicate_time;
-  END IF;  
+  END IF; 
   
   INSERT INTO enroll(S_ID,C_ID,C_ID_NO,E_YEAR,E_SEMESTER, T_TIME, T_DAY)
-  VALUES (sStudentId, sCourseId, nCourseIdNo, nYear, nSemester, 0, 0);
+  VALUES (sStudentId, sCourseId, nCourseIdNo, nYear, nSemester,0,0);
 
   COMMIT;
   result := '수강신청 등록이 완료되었습니다.';
