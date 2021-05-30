@@ -11,8 +11,8 @@
 <title>수강신청 삭제</title>
 </head>
 <body>
-	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
-<%@ include file="../MAIN/top.jsp" %>
+	<a href="../Main/main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
+<%@ include file="../Main/top.jsp" %>
 <% 	
 	request.setCharacterEncoding("UTF-8");
 	if (session_id==null) response.sendRedirect("login.jsp");  
