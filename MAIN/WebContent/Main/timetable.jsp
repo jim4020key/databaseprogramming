@@ -19,7 +19,7 @@
 <%@ include file="top.jsp" %>
 <%
 	if (session_id == null) 
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("../Main/login.jsp");
 %>
 <% 
 	int start =0;

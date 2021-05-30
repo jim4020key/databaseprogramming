@@ -23,7 +23,7 @@
 <%@ include file="../Main/top.jsp" %>
 <%
 	if (session_id == null) 
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("../Main/login.jsp");
 %>
 <% 
 	String search_year = request.getParameter("search_year");

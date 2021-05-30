@@ -9,12 +9,12 @@
 </head>
 <body>
 	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
-	<table width="75%" align="center" bgcolor="#eeeeee" border>
+	<table width="50%" align="center" bgcolor="#eeeeee" border>
 		<tr>
 			<td><div align="center">아이디와 패스워드를 입력하세요</div></td>
 		</tr>
 	</table>
-	<table width="75%" align="center" border>
+	<table width="50%" align="center" border>
 		<form method="post" action="login_verify.jsp">
 			<tr>
 				<td><div align="center">아이디</div></td>

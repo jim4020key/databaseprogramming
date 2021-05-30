@@ -7,17 +7,17 @@
 <title>수강신청 사용자 정보 수정</title>
 </head>
 <body>
-	<a href="../Main/main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
-	<%@ include file="../Main/top.jsp" %>
-	<%
-	if (session_id==null) response.sendRedirect("login.jsp");
-	%>
+<a href="../Main/main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
+<%@ include file="../Main/top.jsp" %>
+<%
+if (session_id==null) response.sendRedirect("../Main/login.jsp");
+%>
 
 <%
 	Connection myConn = null;      PreparedStatement pstmt = null;
 	ResultSet myResultSet = null;   String mySQL = "";
 	String dburl  = "jdbc:oracle:thin:@localhost:1521:xe";
-	String user="1813467학번";     String passwd="ss2";
+	String user="db1714435";     String passwd="oracle";
     String dbdriver = "oracle.jdbc.driver.OracleDriver";    
 
     myConn = DriverManager.getConnection(dburl, user, passwd);
@@ -32,15 +32,18 @@
 	
 %>
 <br>
-<h2 align="center">수정내용을 입력하세요</h2>
+
+<table width="50%" align="center" bgcolor="#eeeeee" border>
+	<tr>
+		<th><div align="center">아이디</div></th>
+		<td><div align="center"><%= s_id %></div></td>
+		<th><div align="center">전공</div></th>
+		<td><div align="center"><%= s_major %></div></td>
+	</tr>
+</table>
 <table width="50%" align="center" border>
 	<form method="post" action="update_verify.jsp">
-		<th></th><th>수정 전</th><th>수정 후</th>
-		<tr>
-			<td><div align="center">아이디</div></td>
-			<td><div align="center"><%= s_id %></div></td>
-			<td><div align="center">수정불가</div></td>
-		</tr>
+		<th></th><th>현재</th><th>수정내용</th>
 		<tr>
 			<td><div align="center">패스워드</div></td>
 			<td><div align="center"><%= s_pwd %></div></td>
@@ -50,11 +53,6 @@
 			<td><div align="center">주소</div></td>
 			<td><div align="center"><%= s_addr %></div></td>
 			<td><div align="center"><input type="text" name="userAddr"></div></td>
-		</tr>
-		<tr>
-			<td><div align="center">전공</div></td>
-			<td><div align="center"><%= s_major %></div></td>
-			<td><div align="center">수정불가</div></td>
 		</tr>
 <%	}	%>
 		<tr>

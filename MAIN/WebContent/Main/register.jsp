@@ -10,12 +10,13 @@
 <body>
 	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
 	<%@ include file="top.jsp" %>
-	<table width="75%" align="center" bgcolor="#eeeeee" border>
+	<br>
+	<table width="50%" align="center" bgcolor="#eeeeee" border>
 		<tr>
 			<td><div align="center">회원정보를 입력하세요</div></td>
 		</tr>
 	</table>
-	<table width="75%" align="center" border>
+	<table width="50%" align="center" border>
 		<form method="post" action="register_verify.jsp">
 			<tr>
 				<td><div align="center">아이디</div></td>

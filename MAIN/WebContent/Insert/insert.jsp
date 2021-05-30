@@ -9,7 +9,7 @@
 <%@ include file="../Main/top.jsp" %>
 <% 	
 	request.setCharacterEncoding("UTF-8");
-	if (session_id==null) response.sendRedirect("login.jsp");  
+	if (session_id==null) response.sendRedirect("../Main/login.jsp");  
 %>
 <table width="75%" align="center" border>
 <br>
