@@ -9,7 +9,7 @@
 </head>
 <body>
 	<a href="main.jsp"><img id = "homeimage" src="../image/sym_rec.png"></a>
-	<table width="75%" align="center" bgcolor="#FFFF99" border>
+	<table width="75%" align="center" bgcolor="#eeeeee" border>
 		<tr>
 			<td><div align="center">아이디와 패스워드를 입력하세요</div></td>
 		</tr>
