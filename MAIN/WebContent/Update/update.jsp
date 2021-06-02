@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" media="screen" href="../Main/DBdesign.css"/>
 <meta charset="UTF-8">
 <title>수강신청 사용자 정보 수정</title>
 </head>

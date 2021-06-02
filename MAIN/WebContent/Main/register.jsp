@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" media="screen" href="DBdesign.css"/>
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" media="screen" href="DBdesign.css"/>
 <meta charset="UTF-8">
 <title>회원가입</title>
 </head>

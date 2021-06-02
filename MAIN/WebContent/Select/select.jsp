@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
+	<link rel="stylesheet" type="text/css" media="screen" href="../Main/DBdesign.css"/>
 	<meta charset="UTF-8">
 	<title>수강신청 조회</title>
 	<script>
@@ -163,6 +164,6 @@
 	
 	
 %>
-	</table>
+	</table><br><br>
 </body>
 </html>

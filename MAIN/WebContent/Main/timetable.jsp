@@ -290,6 +290,6 @@
 		System.err.println("SQLException: " + ex.getMessage());
 	}
 		%>
-		</table>
+		</table><br><br>
 	</body>
 </html>
