@@ -8,6 +8,6 @@ IS
 BEGIN
 
 	OPEN c2 FOR
-	SELECT * from student where s_id = sStudentId and s_pwd = sStudentPw;
+	SELECT * from login_view where s_id = sStudentId and s_pwd = sStudentPw;
 END;
 /
