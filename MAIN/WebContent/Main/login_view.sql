@@ -1,4 +1,5 @@
 CREATE OR REPLACE VIEW login_view
 AS
 SELECT s_id, s_pwd
-FROM student;
+FROM student
+WITH READ ONLY;
