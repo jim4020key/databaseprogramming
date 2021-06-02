@@ -12,7 +12,7 @@ CREATE TABLE enroll(  --수강신청 성공시 정보 입력되는 테이블
 	
 	CONSTRAINT e_pk PRIMARY KEY(s_id, c_id, c_id_no),
 	CONSTRAINT e_c_id_fk FOREIGN KEY(c_id, c_id_no) REFERENCES course(c_id, c_id_no) ON DELETE CASCADE
-	
+	CONSTRAINT t_fk FOREIGN KEY(t_time, t_day) REFERENCES teach(t_time, t_day) ON DELETE CASCADE
 );
 
     --1818181 로그인한 기준으로 오류 작성시 --
