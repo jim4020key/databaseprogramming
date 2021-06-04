@@ -114,11 +114,11 @@
 				max_student_num = sub_rs.getInt("t_max");
 			}
 						
-			sub_sql = "SELECT s_id FROM enroll WHERE c_id = ? and c_id_no = ?";
-			pstmt = conn.prepareStatement(sub_sql);
-			pstmt.setString(1, course_id);
-			pstmt.setInt(2, course_id_no);
-			sub_rs = pstmt.executeQuery();
+			//sub_sql = "SELECT s_id FROM enroll WHERE c_id = ? and c_id_no = ?";
+			//pstmt = conn.prepareStatement(sub_sql);
+			//pstmt.setString(1, course_id);
+			//pstmt.setInt(2, course_id_no);
+			//sub_rs = pstmt.executeQuery();
 			
 			sql = "{? = call getDay(?)}";
 			cstmt = conn.prepareCall(sql);
