@@ -32,7 +32,7 @@
     } catch(SQLException ex) {
 	     System.err.println("SQLException: " + ex.getMessage());
     }
-mySQL = "select c_id,c_id_no,c_name,c_unit,c_class from course where c_id not in (select c_id from enroll where s_id='" + session_id + "')";
+mySQL = "select c_id,c_id_no,c_name,c_unit,c_class from course";
 	
 myResultSet = stmt.executeQuery(mySQL);
 
